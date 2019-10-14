@@ -12,13 +12,15 @@
         android:layout_width="398dp"
         android:layout_height="706dp"
         android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         android:src="@drawable/tn_bckground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.76" />
 
     <Button
         android:id="@+id/button_back"
@@ -34,5 +36,347 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977" />
+
+    <Button
+        android:id="@+id/serve_player1"
+        android:layout_width="141dp"
+        android:layout_height="36dp"
+        android:background="#176EF4"
+        android:backgroundTint="#176EF4"
+        android:text="@string/serve_one"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <Button
+        android:id="@+id/serve_player2"
+        android:layout_width="141dp"
+        android:layout_height="36dp"
+        android:background="#176EF4"
+        android:backgroundTint="#176EF4"
+        android:text="@string/serve_two"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="95dp"
+        app:columnCount="3"
+        app:rowCount="3">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole1"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view1"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole2"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view2"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole3"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view3"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole4"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view4"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole5"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view5"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole6"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view6"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole7"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view7"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole8"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view8"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/id_mole9"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:scaleType="fitEnd" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/id_anim_view9"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal|top" />
+        </FrameLayout>
+
+    </android.support.v7.widget.GridLayout>
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="85dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="150dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="76dp"
+        android:layout_height="149dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="76dp"
+        android:layout_height="149dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="76dp"
+        android:layout_height="149dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/btn_8"
+        android:layout_width="76dp"
+        android:layout_height="149dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="76dp"
+        android:layout_height="149dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toEndOf="@+id/btn_5"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/btn_9"
+        android:layout_width="76dp"
+        android:layout_height="149dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toEndOf="@+id/btn_5"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <Button
+        android:id="@+id/btn_10"
+        android:layout_width="85dp"
+        android:layout_height="117dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="546dp" />
+
+    <Button
+        android:id="@+id/btn_11"
+        android:layout_width="85dp"
+        android:layout_height="117dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="546dp" />
+
+    <Button
+        android:id="@+id/btn_12"
+        android:layout_width="85dp"
+        android:layout_height="117dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="546dp" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="85dp"
+        android:layout_height="117dp"
+        android:text="Button"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="150dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151"/>
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="85dp"
+        android:layout_height="117dp"
+        android:text="Button"
+        android:layout_marginStart="247dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="150dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

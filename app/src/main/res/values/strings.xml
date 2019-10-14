@@ -5,5 +5,7 @@
     <string name="player_two">Player 2</string>
     <string name="start">Start</string>
     <string name="back">Back</string>
+    <string name="serve_one">Player 1 Serve</string>
+    <string name="serve_two">Player 2 Serve</string>
 
 </resources>
