@@ -10,20 +10,15 @@ import com.orhanobut.logger.Logger
 import io.tennis.statistic.R
 import io.tennis.statistic.dataStore.AbstractMessage
 import java.util.ArrayList
+import io.tennis.statistic.dataStore.gameData
 
 private const val EXTRA_PARAM1 = "io.tennis.statistic.extra.PARAM1"
 private const val EXTRA_PARAM2 = "io.tennis.statistic.extra.PARAM2"
 class PlayActivity : AppCompatActivity() {
 
-    object gameData: AbstractMessage(){
-        var spots: MutableList<MutableList<Int>> = ArrayList()
-        var serve: Boolean = false
-        var playerName: String = " "
-        val gson = Gson()
 
-    }
-    private var dataOne: gameData= gameData
-    private var dataTwo: gameData= gameData
+    private var dataOne= gameData()
+    private var dataTwo= gameData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +28,7 @@ class PlayActivity : AppCompatActivity() {
         dataOne.playerName = param1
         dataTwo.playerName = param2
 
-        Logger.i("player one name in Player view" +  dataOne.stringify() + " " + "Player2 name " + " " + dataTwo.stringify())
+        Logger.i("player one name in Player view" +  dataOne.stringify())
 
 
         val btnBack = findViewById<Button>(R.id.button_back)
