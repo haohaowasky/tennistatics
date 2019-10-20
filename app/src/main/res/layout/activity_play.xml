@@ -7,6 +7,8 @@
 
     tools:context=".Views.PlayActivity">
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="398dp"
@@ -23,64 +25,49 @@
         app:layout_constraintVertical_bias="0.48" />
 
     <Button
-        android:id="@+id/button_back"
-        android:layout_width="154dp"
+        android:id="@+id/serve_One"
+        android:layout_width="52dp"
         android:layout_height="31dp"
         android:background="#176EF4"
         android:backgroundTint="#176EF4"
-        android:text="@string/back"
+        android:text="Serve"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.017"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977" />
+        app:layout_constraintVertical_bias="0.322" />
 
     <Button
-        android:id="@+id/btn_out"
-        android:layout_width="154dp"
+        android:id="@+id/serve_Two"
+        android:layout_width="52dp"
         android:layout_height="31dp"
-        android:background="#C6DAE9"
-        android:backgroundTint="#176EF4"
-        android:text="@string/out"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.898"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978" />
-
-    <Button
-        android:id="@+id/serve_player1"
-        android:layout_width="141dp"
-        android:layout_height="36dp"
         android:background="#176EF4"
         android:backgroundTint="#176EF4"
-        android:text="@string/serve_one"
+        android:text="Catch"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.69" />
 
     <Button
-        android:id="@+id/serve_player2"
-        android:layout_width="141dp"
-        android:layout_height="36dp"
+        android:id="@+id/save_Data"
+        android:layout_width="102dp"
+        android:layout_height="41dp"
         android:background="#176EF4"
         android:backgroundTint="#176EF4"
-        android:text="@string/serve_two"
+        android:text="Save data"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.981" />
 
     <Button
         android:id="@+id/btn_1"
@@ -319,5 +306,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151"/>
+
+    <Button
+        android:id="@+id/Player_1"
+        android:layout_width="89dp"
+        android:layout_height="25dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btn_2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/Player_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:background="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/btn_11" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

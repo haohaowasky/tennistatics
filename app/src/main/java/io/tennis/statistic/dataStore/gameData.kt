@@ -6,11 +6,15 @@ class gameData :  AbstractMessage() {
     var spots: MutableList<MutableList<Int>> = ArrayList()
     var serve: Boolean = false
     var playerName: String = ""
+    var result:String =  ""
+    var notes:String = ""
 
-    fun gameData(name: String, server: Boolean,  spot: MutableList<MutableList<Int>>) {
-        this.playerName = name
-        this.serve = server
-        this.spots = spot
+    fun gameData(playerName: String, serve: Boolean,  spots: MutableList<MutableList<Int>>, result:String, notes: String) {
+        this.playerName = playerName
+        this.serve = serve
+        this.spots = spots
+        this.result = result
+        this.notes = notes
     }
 }
 

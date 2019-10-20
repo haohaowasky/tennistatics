@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         btnStart.setOnClickListener {
             playerOneName = playerOne.getText().toString()
             playerTwoName = playerTwo.getText().toString()
-            Logger.i("player one name" +  playerOneName + " " + "Player2 name " + " " + playerTwoName)
+//            Logger.i("player one name" +  playerOneName + " " + "Player2 name " + " " + playerTwoName)
 
             dataOne.playerName = playerOneName
             dataTwo.playerName = playerTwoName
