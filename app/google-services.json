@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "782112675957",
+    "firebase_url": "https://tennistats-97e52.firebaseio.com",
+    "project_id": "tennistats-97e52",
+    "storage_bucket": "tennistats-97e52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782112675957:android:9a445c303b65edcbb1003c",
+        "android_client_info": {
+          "package_name": "io.tennis.statistic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782112675957-d3iugpvhvs61lgqhn3euvo970rmmltka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPk_uMj2N4SDMoZ81I5Tg-kTiqL8FipZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782112675957-d3iugpvhvs61lgqhn3euvo970rmmltka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
