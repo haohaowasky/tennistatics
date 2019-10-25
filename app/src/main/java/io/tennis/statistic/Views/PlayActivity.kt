@@ -14,7 +14,6 @@ import butterknife.ButterKnife
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import io.tennis.statistic.dataStore.AbstractMessage
-import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 
