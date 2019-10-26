@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TennisData</string>
-    <string name="title_name">Welcome TeniData</string>
+    <string name="title_name">Welcome to Tennis Tracker</string>
     <string name="player_one">Player 1</string>
     <string name="player_two">Player 2</string>
     <string name="start">Start</string>

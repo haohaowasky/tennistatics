@@ -27,6 +27,7 @@ class PlayActivity : AppCompatActivity() {
     private var dataTwo= gameData()
     private var serveMap = mutableMapOf<String, gameData>()
     private lateinit var database: DatabaseReference
+    private  var globalArray = ArrayList<Int>()
 
 
     private lateinit var textView_playerOne: Button
@@ -146,25 +147,38 @@ class PlayActivity : AppCompatActivity() {
                 DialogInterface.OnClickListener { dialog, id ->
                     dataOne.result = "win"
                     dataTwo.result = "loose"
+                    for ( n in globalArray){
+                        dataOne.spotsTotal.add(n)
+                        dataTwo.spotsTotal.add(n)
+                    }
                     Logger.i("upload data " + dataOne.stringify())
                     Logger.i("upload data " + dataTwo.stringify())
                     database.child(dataOne.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataOne)
                     database.child(dataTwo.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataTwo)
-
                     dataOne.spots.clear()
                     dataTwo.spots.clear()
+                    dataOne.spotsTotal.clear()
+                    dataTwo.spotsTotal.clear()
+                    globalArray.clear()
                     dialog.dismiss()
                 })
             builder.setNegativeButton( dataTwo.playerName,
                 DialogInterface.OnClickListener { dialog, id ->
-                    dataOne.result = "loose"
+                    dataOne.result = "lose"
                     dataTwo.result = "win"
+                    for ( n in globalArray){
+                        dataOne.spotsTotal.add(n)
+                        dataTwo.spotsTotal.add(n)
+                    }
                     Logger.i("upload data " + dataOne.stringify())
                     Logger.i("Selected " + dataTwo.stringify())
                     database.child(dataOne.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataOne)
                     database.child(dataTwo.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataTwo)
                     dataOne.spots.clear()
                     dataTwo.spots.clear()
+                    dataOne.spotsTotal.clear()
+                    dataTwo.spotsTotal.clear()
+                    globalArray.clear()
                     dialog.dismiss()
                 })
             val alert = builder.create()
@@ -220,61 +234,73 @@ class PlayActivity : AppCompatActivity() {
 
         btn_1.setOnClickListener{
             serveMap["down"]?.spots!!.add(1)
-            Logger.i("added " + 1)
+            globalArray.add(1)
+            Logger.i("array " + globalArray)
         }
 
         btn_2.setOnClickListener{
             serveMap["down"]?.spots!!.add(2)
+            globalArray.add(2)
             Logger.i("added " + 2)
         }
 
         btn_3.setOnClickListener{
             serveMap["down"]?.spots!!.add(3)
+            globalArray.add(3)
             Logger.i("added " + 3)
         }
 
         btn_4.setOnClickListener{
             serveMap["down"]?.spots!!.add(4)
+            globalArray.add(4)
             Logger.i("added " + 4)
         }
 
         btn_5.setOnClickListener{
             serveMap["down"]?.spots!!.add(5)
+            globalArray.add(5)
             Logger.i("added " + 5)
         }
 
         btn_6.setOnClickListener{
             serveMap["down"]?.spots!!.add(6)
+            globalArray.add(6)
             Logger.i("added " + 6)
         }
 
         btn_7.setOnClickListener{
             serveMap["top"]?.spots!!.add(7)
+            globalArray.add(7)
             Logger.i("added " + 7)
         }
 
         btn_8.setOnClickListener{
             serveMap["top"]?.spots!!.add(8)
+            globalArray.add(8)
             Logger.i("added " + 8)
         }
 
         btn_9.setOnClickListener{
             serveMap["top"]?.spots!!.add(9)
+            globalArray.add(9)
             Logger.i("added " + 9)
         }
 
         btn_10.setOnClickListener{
             serveMap["top"]?.spots!!.add(10)
+            globalArray.add(10)
             Logger.i("added " + 10)
         }
 
         btn_11.setOnClickListener{
             serveMap["top"]?.spots!!.add(11)
+            globalArray.add(11)
             Logger.i("added " + 11)
         }
 
         btn_12.setOnClickListener{
             serveMap["top"]?.spots!!.add(12)
+            globalArray.add(12)
             Logger.i("added " + 12)
         }
     }
