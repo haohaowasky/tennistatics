@@ -3,5 +3,8 @@
     <solid
         android:width="2dp"
         android:color="#176EF4" />
+    <stroke android:width="5dip" android:color="#BCC0C4"/> `<!--Border-->`
+
+
 
 </shape>

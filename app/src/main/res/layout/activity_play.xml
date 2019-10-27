@@ -8,20 +8,6 @@
     tools:context=".Views.PlayActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/tn_bckground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/serve_One"
         android:layout_width="52dp"
@@ -69,252 +55,262 @@
         app:layout_constraintVertical_bias="0.981" />
 
     <Button
-        android:id="@+id/btn_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="260dp"
-        android:layout_marginBottom="530dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/one"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="380dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/four"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_7"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="380dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/seven"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_5"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="380dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/five"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_8"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="380dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/eight"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_6"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="223dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="380dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/six"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_9"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="223dp"
-        android:layout_marginTop="380dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/nine"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_10"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="540dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="90dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/ten"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <Button
-        android:id="@+id/btn_11"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="540dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="90dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/eleven"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_12"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="227dp"
-        android:layout_marginTop="540dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="90dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/twelve"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="530dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/two"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btn_3"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="227dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="530dp"
-        android:background="@drawable/button_login_phone"
-        android:text="@string/three"
-        android:textColor="@drawable/button_login_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
         android:id="@+id/Player_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="150dp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
         android:layout_marginBottom="660dp"
         android:background="?android:attr/selectableItemBackground"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tennisCourt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <Button
         android:id="@+id/Player_2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="670dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="75dp"
         android:background="?android:attr/selectableItemBackground"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tennisCourt" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tennisCourt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/tenniscourt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="0.9:1.6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="5">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/one"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_4"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/two"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_5"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/three"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_6"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/four"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_7"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_1"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/five"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_8"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_4"
+            app:layout_constraintTop_toBottomOf="@id/btn_2"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/six"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_9"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_5"
+            app:layout_constraintTop_toBottomOf="@id/btn_3"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/seven"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_10"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_8"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_4"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/eight"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_11"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_9"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_7"
+            app:layout_constraintTop_toBottomOf="@id/btn_5"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/nine"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/btn_12"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_8"
+            app:layout_constraintTop_toBottomOf="@id/btn_6"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/ten"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_11"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_7"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+
+        <Button
+            android:id="@+id/btn_11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/eleven"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toStartOf="@id/btn_12"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_10"
+            app:layout_constraintTop_toBottomOf="@id/btn_8"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/btn_12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/button_login_phone"
+            android:text="@string/twelve"
+            android:textColor="@drawable/button_login_text"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@id/btn_11"
+            app:layout_constraintTop_toBottomOf="@id/btn_9"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 
