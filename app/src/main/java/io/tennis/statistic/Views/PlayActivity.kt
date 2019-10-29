@@ -22,6 +22,9 @@ private const val EXTRA_PARAM1 = "io.tennis.statistic.extra.PARAM1"
 private const val EXTRA_PARAM2 = "io.tennis.statistic.extra.PARAM2"
 private const val EXTRA_PARAM3 = "io.tennis.statistic.extra.PARAM3"
 private const val EXTRA_PARAM4 = "io.tennis.statistic.extra.PARAM4"
+private const val EXTRA_PARAM_TOKEN = "io.tennis.statistic.extra.TOKEN"
+private const val EXTRA_PLAYER = "io.tennis.statistic.extra.PLAYER"
+
 class PlayActivity : AppCompatActivity() {
 
 
@@ -90,6 +93,7 @@ class PlayActivity : AppCompatActivity() {
         val btnServeOne = findViewById<Button>(R.id.serve_One)
         val btnServeTwo = findViewById<Button>(R.id.serve_Two)
         val btnSaveData = findViewById<Button>(R.id.save_Data)
+        val btnGetData = findViewById<Button>(R.id.get_Data)
 
         val btn_1 = findViewById<Button>(R.id.btn_1)
         val btn_2 = findViewById<Button>(R.id.btn_2)
@@ -104,6 +108,35 @@ class PlayActivity : AppCompatActivity() {
         val btn_11 = findViewById<Button>(R.id.btn_11)
         val btn_12 = findViewById<Button>(R.id.btn_12)
 
+        btnGetData.setOnClickListener{
+
+            val builder = AlertDialog.Builder(this)
+            // TODO add reason in Beta version
+            builder.setTitle("Get Data")
+            builder.setMessage("Select the player you want to see")
+            builder.setPositiveButton( dataOne.playerName,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val intent = Intent(this, DataView::class.java).apply {
+                        putExtra(EXTRA_PARAM_TOKEN, userID)
+                        putExtra(EXTRA_PLAYER, dataOne.playerName)
+                    }
+                    startActivity(intent)
+                    dialog.dismiss()
+                })
+            builder.setNegativeButton( dataTwo.playerName,
+                DialogInterface.OnClickListener { dialog, id ->
+                    val intent = Intent(this, DataView::class.java).apply {
+                        putExtra(EXTRA_PARAM_TOKEN, userID)
+                        putExtra(EXTRA_PLAYER, dataTwo.playerName)
+                    }
+                    startActivity(intent)
+                    dialog.dismiss()
+                })
+
+            val alert = builder.create()
+            alert.show()
+
+        }
 
         btnServeOne.setOnClickListener {
             Logger.i("serve data is " + btnServeOne.text)
@@ -155,6 +188,8 @@ class PlayActivity : AppCompatActivity() {
                 DialogInterface.OnClickListener { dialog, id ->
                     dataOne.result = "win"
                     dataTwo.result = "lose"
+                    dataOne.timeStamp = convertLongToTime(System.currentTimeMillis())
+                    dataTwo.timeStamp = convertLongToTime(System.currentTimeMillis())
                     for ( n in globalArray){
                         dataOne.spotsTotal.add(n)
                         dataTwo.spotsTotal.add(n)
@@ -174,6 +209,8 @@ class PlayActivity : AppCompatActivity() {
                 DialogInterface.OnClickListener { dialog, id ->
                     dataOne.result = "lose"
                     dataTwo.result = "win"
+                    dataOne.timeStamp = convertLongToTime(System.currentTimeMillis())
+                    dataTwo.timeStamp = convertLongToTime(System.currentTimeMillis())
                     for ( n in globalArray){
                         dataOne.spotsTotal.add(n)
                         dataTwo.spotsTotal.add(n)

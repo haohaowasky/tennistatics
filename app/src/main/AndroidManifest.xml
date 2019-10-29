@@ -10,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Views.PlayActivity"></activity>
+        <activity
+            android:name=".Views.DataView"
+            android:label="@string/title_activity_data_view"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Views.PlayActivity" />
         <activity android:name=".Views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

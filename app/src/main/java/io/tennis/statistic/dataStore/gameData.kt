@@ -9,14 +9,16 @@ class gameData :  AbstractMessage() {
     var playerName: String = ""
     var result:String =  ""
     var against: String = ""
+    var timeStamp: String = ""
 
-    fun gameData(playerName: String, serve: Boolean,  spots: MutableList<Int>, result:String, against: String, spotsTotal: MutableList<Int>) {
+    fun gameData(playerName: String, serve: Boolean,  spots: MutableList<Int>, result:String, against: String, spotsTotal: MutableList<Int>, timeStamp: String) {
         this.playerName = playerName
         this.serve = serve
         this.spots = spots
         this.result = result
         this.against = against
         this.spotsTotal = spotsTotal
+        this.timeStamp = timeStamp
 
     }
 }

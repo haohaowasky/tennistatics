@@ -21,7 +21,7 @@
     <string name="ten">10</string>
     <string name="eleven">11</string>
     <string name="twelve">12</string>
-
+    <string name="title_activity_data_view">DataView</string>
 
 
 </resources>
