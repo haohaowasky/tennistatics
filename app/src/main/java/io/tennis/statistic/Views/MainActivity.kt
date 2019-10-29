@@ -49,9 +49,9 @@ class MainActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
-                Logger.i("user ID is " + user?.displayName + " and the email is " + user?.email)
+                Logger.i("user ID is " + user?.displayName + " and the email is " + user?.uid)
                 userName = user?.displayName.toString()
-                userID = user?.email.toString()
+                userID = user?.uid.toString()
 
             } else {
                 Logger.i("Sign in failed")

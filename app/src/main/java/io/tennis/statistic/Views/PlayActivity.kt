@@ -20,6 +20,8 @@ import java.util.*
 
 private const val EXTRA_PARAM1 = "io.tennis.statistic.extra.PARAM1"
 private const val EXTRA_PARAM2 = "io.tennis.statistic.extra.PARAM2"
+private const val EXTRA_PARAM3 = "io.tennis.statistic.extra.PARAM3"
+private const val EXTRA_PARAM4 = "io.tennis.statistic.extra.PARAM4"
 class PlayActivity : AppCompatActivity() {
 
 
@@ -28,6 +30,8 @@ class PlayActivity : AppCompatActivity() {
     private var serveMap = mutableMapOf<String, gameData>()
     private lateinit var database: DatabaseReference
     private  var globalArray = ArrayList<Int>()
+    private var userName: String= ""
+    private var userID: String= ""
 
 
     private lateinit var textView_playerOne: Button
@@ -46,12 +50,16 @@ class PlayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ButterKnife.bind(this)
-//        mPlayerText1 = findViewById<TextView>(R.id.playerOne)
         database = FirebaseDatabase.getInstance().reference
 
         setContentView(R.layout.activity_play)
         val param1 = intent.getStringExtra(EXTRA_PARAM1)
         val param2 = intent.getStringExtra(EXTRA_PARAM2)
+        val param3 = intent.getStringExtra(EXTRA_PARAM3)
+        val param4 = intent.getStringExtra(EXTRA_PARAM4)
+
+        userName = param3 // for setting up profile in the future
+        userID = param4
 
         dataOne.playerName = param1
         dataTwo.playerName = param2
@@ -146,15 +154,15 @@ class PlayActivity : AppCompatActivity() {
             builder.setPositiveButton( dataOne.playerName,
                 DialogInterface.OnClickListener { dialog, id ->
                     dataOne.result = "win"
-                    dataTwo.result = "loose"
+                    dataTwo.result = "lose"
                     for ( n in globalArray){
                         dataOne.spotsTotal.add(n)
                         dataTwo.spotsTotal.add(n)
                     }
                     Logger.i("upload data " + dataOne.stringify())
                     Logger.i("upload data " + dataTwo.stringify())
-                    database.child(dataOne.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataOne)
-                    database.child(dataTwo.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataTwo)
+                    database.child("Users").child(userID).child("Games").child(dataOne.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataOne)
+                    database.child("Users").child(userID).child("Games").child(dataTwo.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataTwo)
                     dataOne.spots.clear()
                     dataTwo.spots.clear()
                     dataOne.spotsTotal.clear()
@@ -172,8 +180,8 @@ class PlayActivity : AppCompatActivity() {
                     }
                     Logger.i("upload data " + dataOne.stringify())
                     Logger.i("Selected " + dataTwo.stringify())
-                    database.child(dataOne.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataOne)
-                    database.child(dataTwo.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataTwo)
+                    database.child("Users").child(userID).child("Games").child(dataOne.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataOne)
+                    database.child("Users").child(userID).child("Games").child(dataTwo.playerName).child((System.currentTimeMillis()).toString()).push().setValue(dataTwo)
                     dataOne.spots.clear()
                     dataTwo.spots.clear()
                     dataOne.spotsTotal.clear()
