@@ -14,12 +14,6 @@ import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
 
-
-
-
-
-
-
 private const val EXTRA_PARAM1 = "io.tennis.statistic.extra.PARAM1"
 private const val EXTRA_PARAM2 = "io.tennis.statistic.extra.PARAM2"
 private const val EXTRA_PARAM3 = "io.tennis.statistic.extra.PARAM3"
