@@ -11,8 +11,10 @@ import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import com.orhanobut.logger.Logger
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
+
+
+
 
 private const val EXTRA_PARAM1 = "io.tennis.statistic.extra.PARAM1"
 private const val EXTRA_PARAM2 = "io.tennis.statistic.extra.PARAM2"
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         var btnStart = findViewById<Button>(io.tennis.statistic.R.id.button_back)
         var btnSignIn = findViewById<Button>(io.tennis.statistic.R.id.btn_signIn)
 
-        btnSignIn.setVisibility(View.GONE)
+        btnSignIn.setText("Sign Out")
 
         btnStart.setOnClickListener {
             playerOneName = playerOne.getText().toString()
@@ -72,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == 1) {
             val response = IdpResponse.fromResultIntent(data)
-
+            ifSignIn = true
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
@@ -82,6 +84,8 @@ class MainActivity : AppCompatActivity() {
 
             } else {
                 Logger.i("Sign in failed")
+                btnSignIn.setText("Sign In")
+                ifSignIn = false
             }
         }
     }
@@ -94,41 +98,24 @@ class MainActivity : AppCompatActivity() {
 
         var btnSignIn = findViewById<Button>(io.tennis.statistic.R.id.btn_signIn)
 
-//        if(ifSignIn == false) {
-//            btnStart.setVisibility(View.GONE)
-//            playerOne.setVisibility(View.GONE)
-//            playerTwo.setVisibility(View.GONE)
-//        }
-
-
-//        btnStart.setOnClickListener {
-//            playerOneName = playerOne.getText().toString()
-//            playerTwoName = playerTwo.getText().toString()
-////            Logger.i("player one name" +  playerOneName + " " + "Player2 name " + " " + playerTwoName)
-//
-//            dataOne.playerName = playerOneName
-//            dataTwo.playerName = playerTwoName
-//
-//            Logger.i("player one name" +  dataOne.toString() + " " + "Player2 name " + " " + dataTwo.toString())
-//
-//            val intent = Intent(this, PlayActivity::class.java).apply {
-//                putExtra(EXTRA_PARAM1, playerOneName)
-//                putExtra(EXTRA_PARAM2, playerTwoName)
-//                putExtra(EXTRA_PARAM3, userName)
-//                putExtra(EXTRA_PARAM4, userID)
-//            }
-//            startActivity(intent)
-//            this.finish()
-//        }
-
-
         btnSignIn.setOnClickListener{
-            startActivityForResult(
-                AuthUI.getInstance()
-                    .createSignInIntentBuilder()
-                    .setAvailableProviders(providers)
-                    .build(),
-                1)
+
+            if (ifSignIn == false) {
+                startActivityForResult(
+                    AuthUI.getInstance()
+                        .createSignInIntentBuilder()
+                        .setAvailableProviders(providers)
+                        .build(),
+                    1
+                )
+            } else {
+                AuthUI.getInstance().signOut(this).addOnCompleteListener {
+                    // user is now signed out
+                    btnSignIn.setText("Sign in")
+                    ifSignIn = false
+                }
+            }
+
         }
     }
 
