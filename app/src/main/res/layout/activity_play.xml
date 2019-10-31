@@ -30,7 +30,7 @@
         android:layout_height="31dp"
         android:background="#176EF4"
         android:backgroundTint="#176EF4"
-        android:text="Catch"
+        android:text="RTN"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

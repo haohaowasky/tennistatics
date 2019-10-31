@@ -13,7 +13,7 @@ class CustomAdapter(val userList: ArrayList<gameData>): RecyclerView.Adapter<Cus
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder?.txtagainst?.text = "Against: " + userList[position].against
         if (userList[position].serve == false) {
-            holder?.txtServe?.text = "Catch"
+            holder?.txtServe?.text = "Return"
         }else {
             holder?.txtServe?.text = "Serve"
         }
