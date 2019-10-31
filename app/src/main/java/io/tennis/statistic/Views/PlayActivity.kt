@@ -142,14 +142,14 @@ class PlayActivity : AppCompatActivity() {
             when (btnServeOne.text) {
                 "Serve" ->
                     if(btnServeOne.text != btnServeTwo.text){
-                        btnServeOne.setText("Return")
+                        btnServeOne.setText("Rtn")
                         btnServeTwo.setText("Serve")
                     }
 
-                "Return" ->
+                "Rtn" ->
                     if(btnServeOne.text != btnServeTwo.text){
                         btnServeOne.setText("Serve")
-                        btnServeTwo.setText("Return")
+                        btnServeTwo.setText("Rtn")
                     }
             }
             dataOne.serve = !dataOne.serve
@@ -162,14 +162,14 @@ class PlayActivity : AppCompatActivity() {
             when (btnServeOne.text) {
                 "Serve" ->
                     if(btnServeOne.text != btnServeTwo.text){
-                        btnServeOne.setText("Return")
+                        btnServeOne.setText("Rtn")
                         btnServeTwo.setText("Serve")
                     }
 
-                "Return" ->
+                "Rtn" ->
                     if(btnServeOne.text != btnServeTwo.text){
                         btnServeOne.setText("Serve")
-                        btnServeTwo.setText("Return")
+                        btnServeTwo.setText("Rtn")
                     }
             }
 
