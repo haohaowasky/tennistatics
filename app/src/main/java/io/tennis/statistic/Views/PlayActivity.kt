@@ -100,13 +100,12 @@ class PlayActivity : AppCompatActivity() {
         val btn_3 = findViewById<Button>(R.id.btn_3)
         val btn_4 = findViewById<Button>(R.id.btn_4)
         val btn_5 = findViewById<Button>(R.id.btn_5)
-        val btn_6 = findViewById<Button>(R.id.btn_6)
-        val btn_7 = findViewById<Button>(R.id.btn_7)
+        val btn_6 = findViewById<Button>(R.id.btn_5)
+        val btn_7 = findViewById<Button>(R.id.btn_6)
         val btn_8 = findViewById<Button>(R.id.btn_8)
-        val btn_9 = findViewById<Button>(R.id.btn_9)
-        val btn_10 = findViewById<Button>(R.id.btn_10)
-        val btn_11 = findViewById<Button>(R.id.btn_11)
-        val btn_12 = findViewById<Button>(R.id.btn_12)
+        val btn_9 = findViewById<Button>(R.id.btn_7)
+        val btn_10 = findViewById<Button>(R.id.btn_8)
+
 
         btnGetData.setOnClickListener{
 
@@ -308,7 +307,7 @@ class PlayActivity : AppCompatActivity() {
         }
 
         btn_6.setOnClickListener{
-            serveMap["down"]?.spots!!.add(6)
+            serveMap["top"]?.spots!!.add(6)
             globalArray.add(6)
             Logger.i("added " + 6)
         }
@@ -337,17 +336,6 @@ class PlayActivity : AppCompatActivity() {
             Logger.i("added " + 10)
         }
 
-        btn_11.setOnClickListener{
-            serveMap["top"]?.spots!!.add(11)
-            globalArray.add(11)
-            Logger.i("added " + 11)
-        }
-
-        btn_12.setOnClickListener{
-            serveMap["top"]?.spots!!.add(12)
-            globalArray.add(12)
-            Logger.i("added " + 12)
-        }
     }
 
     override fun onStart() {

@@ -142,7 +142,6 @@
             android:text="@string/two"
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@id/btn_5"
             app:layout_constraintDimensionRatio="1:1.3"
             app:layout_constraintEnd_toStartOf="@id/btn_3"
             app:layout_constraintHorizontal_chainStyle="spread"
@@ -159,7 +158,7 @@
             android:text="@string/three"
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@id/btn_6"
+            app:layout_constraintBottom_toTopOf="@id/btn_5"
             app:layout_constraintDimensionRatio="1:1.3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread"
@@ -176,11 +175,11 @@
             android:text="@string/four"
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@id/btn_7"
-            app:layout_constraintDimensionRatio="1:1.3"
-            app:layout_constraintEnd_toStartOf="@id/btn_5"
+            app:layout_constraintBottom_toTopOf="@id/btn_6"
+            app:layout_constraintDimensionRatio="1:0.87"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_5"
             app:layout_constraintTop_toBottomOf="@id/btn_1"
             app:layout_constraintVertical_chainStyle="spread" />
 
@@ -193,29 +192,30 @@
             android:text="@string/five"
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@id/btn_8"
-            app:layout_constraintDimensionRatio="1:1.3"
-            app:layout_constraintEnd_toStartOf="@id/btn_3"
+            app:layout_constraintBottom_toTopOf="@id/btn_7"
+            app:layout_constraintDimensionRatio="1:0.87"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toEndOf="@id/btn_4"
-            app:layout_constraintTop_toBottomOf="@id/btn_2"
+            app:layout_constraintTop_toBottomOf="@id/btn_3"
             app:layout_constraintVertical_chainStyle="spread" />
+
 
         <Button
             android:id="@+id/btn_6"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_margin="0dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_login_phone"
             android:text="@string/six"
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@id/btn_9"
-            app:layout_constraintDimensionRatio="1:1.3"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_8"
+            app:layout_constraintDimensionRatio="1:0.87"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toEndOf="@id/btn_5"
-            app:layout_constraintTop_toBottomOf="@id/btn_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_7"
+            app:layout_constraintTop_toBottomOf="@id/btn_4"
             app:layout_constraintVertical_chainStyle="spread" />
 
 
@@ -229,28 +229,28 @@
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
             app:layout_constraintBottom_toTopOf="@id/btn_10"
-            app:layout_constraintDimensionRatio="1:1.3"
-            app:layout_constraintEnd_toStartOf="@id/btn_8"
+            app:layout_constraintDimensionRatio="1:0.87"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_4"
+            app:layout_constraintStart_toEndOf="@id/btn_6"
+            app:layout_constraintTop_toBottomOf="@id/btn_5"
             app:layout_constraintVertical_chainStyle="spread" />
 
         <Button
             android:id="@+id/btn_8"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_margin="0dp"
             android:background="@drawable/button_login_phone"
             android:text="@string/eight"
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@id/btn_11"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1.3"
             app:layout_constraintEnd_toStartOf="@id/btn_9"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toEndOf="@id/btn_7"
-            app:layout_constraintTop_toBottomOf="@id/btn_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_6"
             app:layout_constraintVertical_chainStyle="spread" />
 
 
@@ -258,17 +258,16 @@
             android:id="@+id/btn_9"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_margin="0dp"
             android:background="@drawable/button_login_phone"
             android:text="@string/nine"
             android:textColor="@drawable/button_login_text"
             android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@id/btn_12"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1.3"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_10"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toEndOf="@id/btn_8"
-            app:layout_constraintTop_toBottomOf="@id/btn_6"
             app:layout_constraintVertical_chainStyle="spread" />
 
         <Button
@@ -282,45 +281,10 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1.3"
-            app:layout_constraintEnd_toStartOf="@id/btn_11"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_7"
-            app:layout_constraintVertical_chainStyle="spread" />
-
-
-        <Button
-            android:id="@+id/btn_11"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="0dp"
-            android:background="@drawable/button_login_phone"
-            android:text="@string/eleven"
-            android:textColor="@drawable/button_login_text"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1:1.3"
-            app:layout_constraintEnd_toStartOf="@id/btn_12"
-            app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toEndOf="@id/btn_10"
-            app:layout_constraintTop_toBottomOf="@id/btn_8"
-            app:layout_constraintVertical_chainStyle="spread" />
-
-        <Button
-            android:id="@+id/btn_12"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_margin="0dp"
-            android:background="@drawable/button_login_phone"
-            android:text="@string/twelve"
-            android:textColor="@drawable/button_login_text"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="1:1.3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread"
-            app:layout_constraintStart_toEndOf="@id/btn_11"
-            app:layout_constraintTop_toBottomOf="@id/btn_9"
+            app:layout_constraintStart_toEndOf="@id/btn_9"
+            app:layout_constraintTop_toBottomOf="@id/btn_7"
             app:layout_constraintVertical_chainStyle="spread" />
 
 
