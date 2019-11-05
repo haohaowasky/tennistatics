@@ -14,6 +14,7 @@ import butterknife.ButterKnife
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import io.tennis.statistic.dataStore.AbstractMessage
+import kotlinx.android.synthetic.main.activity_play.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -105,7 +106,6 @@ class PlayActivity : AppCompatActivity() {
         val btn_8 = findViewById<Button>(R.id.btn_8)
         val btn_9 = findViewById<Button>(R.id.btn_7)
         val btn_10 = findViewById<Button>(R.id.btn_8)
-
 
         btnGetData.setOnClickListener{
 
@@ -306,6 +306,19 @@ class PlayActivity : AppCompatActivity() {
             Logger.i("added " + 5)
         }
 
+        btn_out_11.setOnClickListener{
+            serveMap["down"]?.spots!!.add(11)
+            globalArray.add(11)
+            Logger.i("added " + 11)
+        }
+
+        btn_out_12.setOnClickListener{
+            serveMap["down"]?.spots!!.add(12)
+            globalArray.add(12)
+            Logger.i("added " + 12)
+        }
+
+
         btn_6.setOnClickListener{
             serveMap["top"]?.spots!!.add(6)
             globalArray.add(6)
@@ -334,6 +347,19 @@ class PlayActivity : AppCompatActivity() {
             serveMap["top"]?.spots!!.add(10)
             globalArray.add(10)
             Logger.i("added " + 10)
+        }
+
+
+        btn_out_13.setOnClickListener{
+            serveMap["top"]?.spots!!.add(13)
+            globalArray.add(13)
+            Logger.i("added " + 13)
+        }
+
+        btn_out_14.setOnClickListener{
+            serveMap["top"]?.spots!!.add(14)
+            globalArray.add(14)
+            Logger.i("added " + 14)
         }
 
     }
