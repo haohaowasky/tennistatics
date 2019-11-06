@@ -101,11 +101,11 @@ class PlayActivity : AppCompatActivity() {
         val btn_3 = findViewById<Button>(R.id.btn_3)
         val btn_4 = findViewById<Button>(R.id.btn_4)
         val btn_5 = findViewById<Button>(R.id.btn_5)
-        val btn_6 = findViewById<Button>(R.id.btn_5)
-        val btn_7 = findViewById<Button>(R.id.btn_6)
+        val btn_6 = findViewById<Button>(R.id.btn_6)
+        val btn_7 = findViewById<Button>(R.id.btn_7)
         val btn_8 = findViewById<Button>(R.id.btn_8)
-        val btn_9 = findViewById<Button>(R.id.btn_7)
-        val btn_10 = findViewById<Button>(R.id.btn_8)
+        val btn_9 = findViewById<Button>(R.id.btn_9)
+        val btn_10 = findViewById<Button>(R.id.btn_10)
 
         btnGetData.setOnClickListener{
 
