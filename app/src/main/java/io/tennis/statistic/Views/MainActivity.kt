@@ -20,6 +20,8 @@ private const val EXTRA_PARAM1 = "io.tennis.statistic.extra.PARAM1"
 private const val EXTRA_PARAM2 = "io.tennis.statistic.extra.PARAM2"
 private const val EXTRA_PARAM3 = "io.tennis.statistic.extra.PARAM3"
 private const val EXTRA_PARAM4 = "io.tennis.statistic.extra.PARAM4"
+private const val EXTRA_PARAM_TOKEN = "io.tennis.statistic.extra.TOKEN"
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -48,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         var playerTwo= findViewById(io.tennis.statistic.R.id.playerTwo) as EditText
         var btnStart = findViewById<Button>(io.tennis.statistic.R.id.button_back)
         var btnSignIn = findViewById<Button>(io.tennis.statistic.R.id.btn_signIn)
+        var btn_getPlayer = findViewById<Button>(io.tennis.statistic.R.id.btn_getData)
 
         btnSignIn.setText("Sign Out")
 
@@ -69,6 +72,13 @@ class MainActivity : AppCompatActivity() {
             }
             startActivity(intent)
             this.finish()
+        }
+
+        btn_getPlayer.setOnClickListener{
+            val intent = Intent(this, PlayerView::class.java).apply {
+                putExtra(EXTRA_PARAM_TOKEN, userID)
+            }
+            startActivity(intent)
         }
 
 

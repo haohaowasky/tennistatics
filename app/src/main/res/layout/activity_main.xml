@@ -63,21 +63,37 @@
 
     <Button
         android:id="@+id/button_back"
-        android:layout_width="198dp"
-        android:layout_height="40dp"
+        android:layout_width="133dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
         android:background="#176EF4"
         android:backgroundTint="#176EF4"
         android:text="@string/start"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_signIn"
         app:layout_constraintVertical_bias="0.695" />
 
+    <Button
+        android:id="@+id/btn_getData"
+        android:layout_width="133dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
+        android:background="#176EF4"
+        android:backgroundTint="#176EF4"
+        android:text="players"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signIn"
+        app:layout_constraintVertical_bias="0.555" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,12 @@
             android:name=".Views.DataView"
             android:label="@string/title_activity_data_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".Views.PlayerView"
+            android:label="playerView"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity android:name=".Views.PlayActivity" />
         <activity android:name=".Views.MainActivity">
             <intent-filter>

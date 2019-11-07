@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androicontent_data_view.xmldx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,4 +8,4 @@
     tools:context=".Views.DataView"
     tools:showIn="@layout/activity_data_view">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androicontent_data_view.xmldx.constraintlayout.widget.ConstraintLayout>
