@@ -62,7 +62,7 @@ class PlayerView : AppCompatActivity() {
     fun onEventBoardUpdated(board: ArrayList<String>) {
         var listView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.playerListRecyclerView)
         listView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        var adapter = PlayersAdapter(board)
+        var adapter = PlayersAdapter(board, userToken)
         listView.adapter = adapter
 //        for (n in board){
 ////            listView.addItemDecoration()

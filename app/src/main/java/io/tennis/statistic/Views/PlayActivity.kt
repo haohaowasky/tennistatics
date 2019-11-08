@@ -35,7 +35,7 @@ class PlayActivity : AppCompatActivity() {
     private lateinit var database: DatabaseReference
     private  var globalArray = ArrayList<Int>()
     private var userName: String= ""
-    private var userID: String= ""
+    public var userID: String= ""
 
 
     private lateinit var textView_playerOne: Button
