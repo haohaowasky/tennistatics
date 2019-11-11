@@ -67,6 +67,12 @@ class PlayersAdapter(val userList: ArrayList<String>, userID:String): RecyclerVi
             displayData.returnWinPercent = (return_win.toDouble()/total_round.toDouble()).times(100).toInt().toString()
             displayData.shortWin = (short_win.toDouble()/total_win.toDouble()).times(100).toInt().toString()
             displayData.longwin = (long_win.toDouble()/total_win.toDouble()).times(100).toInt().toString()
+
+            displayData.total_round = total_round
+            displayData.total_win = total_win
+            displayData.serve_win = serve_win
+            displayData.return_win = return_win
+
             EventBus.getDefault().post(displayData)
         }
 

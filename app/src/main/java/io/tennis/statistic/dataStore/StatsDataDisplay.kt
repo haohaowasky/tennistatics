@@ -7,7 +7,12 @@ class StatsDataDisplay :  AbstractMessage() {
     var returnWinPercent: String = ""
     var shortWin: String = ""
     var longwin:String =  ""
-
+    var total_round: Int = 0
+    var total_win: Int = 0
+    var serve_win: Int = 0
+    var return_win: Int = 0
+    var short_win: Int = 0
+    var long_win: Int = 0
 
     fun gameData(totalWinPercent: String, serveWinPercent: String,  returnWinPercent: String, shortWin:String, longwin: String) {
         this.totalWinPercent = totalWinPercent

@@ -91,12 +91,19 @@ class PlayerView : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         // TODO add reason in Beta version
         builder.setTitle("Stats Data")
-        builder.setMessage("total win is " + displayData.totalWinPercent + " %" + "\n" +
-                            "serve win is " + displayData.serveWinPercent + " %" + "\n" +
-                            "return win is " + displayData.returnWinPercent + " %" + "\n" +
-                            "1-4 Shot win is  " + displayData.shortWin + " %" + "\n" +
-                            "5 + Shot win is " + displayData.longwin + " %" + "\n"
+        builder.setMessage(
+                            "total rounds is " + displayData.total_round + "\n" +
+                            "total win is " + displayData.total_win  + "\n" +
+                            "total win when serve is " + displayData.serve_win  + "\n" +
+                            "total win when return is " + displayData.return_win  + "\n" +
+
+                            "total win percentage is " + displayData.totalWinPercent + " %" + "\n" +
+                            "serve win percentage is " + displayData.serveWinPercent + " %" + "\n" +
+                            "return win percentage is " + displayData.returnWinPercent + " %" + "\n" +
+                            "1-4 Shot win percentage is  " + displayData.shortWin + " %" + "\n" +
+                            "5 + Shot win percentage is " + displayData.longwin + " %" + "\n"
         )
+
         builder.setPositiveButton( "OK",
             DialogInterface.OnClickListener { dialog, id ->
                 dialog.dismiss()
