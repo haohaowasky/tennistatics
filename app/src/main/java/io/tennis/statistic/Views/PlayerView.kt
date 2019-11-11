@@ -1,5 +1,7 @@
 package io.tennis.statistic.Views
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
@@ -13,9 +15,13 @@ import com.orhanobut.logger.Logger
 import io.tennis.statistic.R
 import io.tennis.statistic.adapter.CustomAdapter
 import io.tennis.statistic.adapter.PlayersAdapter
+import io.tennis.statistic.dataStore.StatsDataDisplay
 import io.tennis.statistic.dataStore.gameData
 
 import kotlinx.android.synthetic.main.activity_data_view.*
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -43,9 +49,6 @@ class PlayerView : AppCompatActivity() {
                 playerNames.add(i.key.toString())
             }
 //
-//            for (i in displayData){
-//                Logger.i("so the data is " + gson.toJson(i))
-//            }
 
             onEventBoardUpdated(playerNames)
         }
@@ -58,6 +61,7 @@ class PlayerView : AppCompatActivity() {
         }
 
     }
+
 
     fun onEventBoardUpdated(board: ArrayList<String>) {
         var listView = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.playerListRecyclerView)
@@ -77,6 +81,29 @@ class PlayerView : AppCompatActivity() {
         userToken = intent.getStringExtra(EXTRA_PARAM_TOKEN)
         database = FirebaseDatabase.getInstance().reference
         database.addListenerForSingleValueEvent(postListener)
+        EventBus.getDefault().register(this)
+
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onDisplayData(displayData: StatsDataDisplay){
+        Logger.i("got event" +displayData.totalWinPercent + "%")
+        val builder = AlertDialog.Builder(this)
+        // TODO add reason in Beta version
+        builder.setTitle("Stats Data")
+        builder.setMessage("total win is " + displayData.totalWinPercent + " %" + "\n" +
+                            "serve win is " + displayData.serveWinPercent + " %" + "\n" +
+                            "return win is " + displayData.returnWinPercent + " %" + "\n" +
+                            "1-4 Shot win is  " + displayData.shortWin + " %" + "\n" +
+                            "5 + Shot win is " + displayData.longwin + " %" + "\n"
+        )
+        builder.setPositiveButton( "OK",
+            DialogInterface.OnClickListener { dialog, id ->
+                dialog.dismiss()
+            })
+
+        val alert = builder.create()
+        alert.show()
     }
 
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {

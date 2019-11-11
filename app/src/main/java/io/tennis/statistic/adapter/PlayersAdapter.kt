@@ -1,17 +1,23 @@
 package io.tennis.statistic.adapter
 
+import android.app.AlertDialog
+import android.app.PendingIntent.getActivity
+import android.content.DialogInterface
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.google.gson.Gson
 import com.orhanobut.logger.Logger
 import io.tennis.statistic.R
-import io.tennis.statistic.Views.MainActivity.gameData.playerName
+import io.tennis.statistic.Views.MainActivity
+import io.tennis.statistic.Views.PlayerView
+import io.tennis.statistic.dataStore.StatsDataDisplay
 import io.tennis.statistic.dataStore.gameData
+import org.greenrobot.eventbus.EventBus
 
 class PlayersAdapter(val userList: ArrayList<String>, userID:String): RecyclerView.Adapter<PlayersAdapter.ViewHolder>() {
     private lateinit var database: DatabaseReference
@@ -22,6 +28,7 @@ class PlayersAdapter(val userList: ArrayList<String>, userID:String): RecyclerVi
     private var return_win = 0
     private var short_win = 0
     private var long_win = 0
+    private var displayData = StatsDataDisplay()
 
 
     val postListener = object : ValueEventListener {
@@ -55,8 +62,12 @@ class PlayersAdapter(val userList: ArrayList<String>, userID:String): RecyclerVi
                 }
             }
             Logger.i("total round: " + total_round + " total win + " +  total_win + " total serve win  " + serve_win + " return win  " + return_win + " short win : " + short_win + " long win "+ long_win )
-
-
+            displayData.totalWinPercent = (total_win.toDouble()/total_round.toDouble()).times(100).toInt().toString()
+            displayData.serveWinPercent = (serve_win.toDouble()/total_round.toDouble()).times(100).toInt().toString()
+            displayData.returnWinPercent = (return_win.toDouble()/total_round.toDouble()).times(100).toInt().toString()
+            displayData.shortWin = (short_win.toDouble()/total_win.toDouble()).times(100).toInt().toString()
+            displayData.longwin = (long_win.toDouble()/total_win.toDouble()).times(100).toInt().toString()
+            EventBus.getDefault().post(displayData)
         }
 
         override fun onCancelled(databaseError: DatabaseError) {
@@ -74,6 +85,7 @@ class PlayersAdapter(val userList: ArrayList<String>, userID:String): RecyclerVi
             playersName = holder?.txtPlayers?.text.toString()
             Logger.i("button clicked  " + holder?.txtPlayers?.text.toString() )
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
