@@ -16,28 +16,54 @@ import io.tennis.statistic.dataStore.gameData
 class PlayersAdapter(val userList: ArrayList<String>, userID:String): RecyclerView.Adapter<PlayersAdapter.ViewHolder>() {
     private lateinit var database: DatabaseReference
     private var playersName = ""
+    private var total_round = 0
+    private var total_win = 0
+    private var serve_win = 0
+    private var return_win = 0
+    private var short_win = 0
+    private var long_win = 0
+
 
     val postListener = object : ValueEventListener {
         override fun onDataChange(dataSnapshot: DataSnapshot) {
             // Get Post object and use the values to update the UI
             val post = dataSnapshot.child("Users").child(userID).child("Games").child(playersName)
-//            val gson = Gson()
-            Logger.i("data is " + userID + " " + playersName )
+            val gson = Gson()
+            Logger.i("data is " + userID + " " + playersName)
 
-            for (i in post.children){
-                Logger.i("the data is " + i.toString())
+            for (i in post.children) {
+                for (j in i.children) {
+                    Logger.i("the data is " + j.getValue(gameData::class.java)!!.result)
+                    total_round += 1
+                    if (j.getValue(gameData::class.java)!!.result == "win") {
+                        total_win += 1
+                        when (j.getValue(gameData::class.java)!!.serve) {
+                            true -> serve_win += 1
+                            false -> return_win += 1
+
+                        }
+
+                        if (j.getValue(gameData::class.java)!!.spots.size < 3) {
+                            short_win += 1
+                        } else {
+                            long_win += 1
+                        }
+                    }
+//                Logger.i("the data is " + i.getValue(gameData::class.java)!!.result)
+//                Logger.i("the data is " + i.toString())
+
+                }
             }
+            Logger.i("total round: " + total_round + " total win + " +  total_win + " total serve win  " + serve_win + " return win  " + return_win + " short win : " + short_win + " long win "+ long_win )
 
 
         }
-
 
         override fun onCancelled(databaseError: DatabaseError) {
             // Getting Post failed, log a message
             Logger.i("fail get data" + databaseError.toException())
             // ...
         }
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -52,7 +78,7 @@ class PlayersAdapter(val userList: ArrayList<String>, userID:String): RecyclerVi
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent?.context).inflate(R.layout.players, parent, false)
-        return ViewHolder(v);
+        return ViewHolder(v)
     }
 
     override fun getItemCount(): Int {
