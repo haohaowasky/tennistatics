@@ -137,7 +137,7 @@
         android:id="@+id/Player_1"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="660dp"
         android:background="?android:attr/selectableItemBackground"
         android:text="TextView"
