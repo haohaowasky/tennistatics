@@ -362,6 +362,11 @@ class PlayActivity : AppCompatActivity() {
             Logger.i("added " + 14)
         }
 
+        btn_net.setOnClickListener{
+            globalArray.add(15)
+            Logger.i("added " + 15)
+        }
+
     }
 
     override fun onStart() {
